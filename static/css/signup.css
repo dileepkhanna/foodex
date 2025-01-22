@@ -1,0 +1,110 @@
+/* Root variables for color palette */
+:root {
+    --primary-color: #FC8019;
+    --primary-dark: #E65C00;
+    --white: #FFFFFF;
+    --light-gray: #F5F5F5;
+    --dark-gray: #333333;
+    --text-primary: #000000;
+    --text-secondary: #4A4A4A;
+    --gradient: linear-gradient(135deg, #FC8019, #FF5733);
+}
+
+/* General styling */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: var(--gradient);
+    color: var(--text-primary);
+}
+
+/* Container for the form */
+div {
+    background-color: var(--white);
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    padding: 20px 50px; /* Reduced vertical padding, increased horizontal padding */
+    width: 95%;
+    max-width: 500px; /* Increased maximum width */
+    box-sizing: border-box;
+    text-align: center;
+}
+
+/* Headings */
+h3 {
+    text-align: center;
+    color: var(--primary-color);
+    font-size: 1.8rem;
+    margin-bottom: 15px; /* Slightly reduced margin */
+}
+
+/* Labels */
+label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 8px;
+    color: var(--text-secondary);
+    text-align: left;
+}
+
+/* Inputs and textarea */
+input, textarea {
+    width: 100%;
+    padding: 10px; /* Reduced padding for height adjustment */
+    margin-bottom: 12px; /* Reduced margin for compactness */
+    border: 1px solid var(--light-gray);
+    border-radius: 6px;
+    font-size: 14px;
+    background-color: var(--light-gray);
+    color: var(--text-primary);
+    box-sizing: border-box;
+    transition: border-color 0.3s ease, background-color 0.3s ease;
+}
+
+input:focus, textarea:focus {
+    border-color: var(--primary-color);
+    background-color: var(--white);
+    outline: none;
+}
+
+/* Textarea */
+textarea {
+    resize: vertical;
+    height: 70px; /* Slightly reduced height */
+}
+
+/* Button styling */
+button {
+    width: 100%;
+    padding: 10px; /* Reduced padding for height adjustment */
+    background: var(--gradient);
+    color: var(--white);
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    background: var(--primary-dark);
+}
+
+/* Responsive design */
+@media (max-width: 480px) {
+    div {
+        padding: 15px 30px; /* Adjusted padding for smaller screens */
+    }
+
+    h3 {
+        font-size: 1.5rem;
+    }
+}
