@@ -1,0 +1,88 @@
+/* Restaurant-Inspired Color Palette */
+:root {
+  --background-dark: #2E3B2F; /* Dark Olive Green */
+  --background-light: #F7F5ED; /* Soft Cream */
+  --accent-gold: #D9C17E; /* Muted Gold */
+  --text-primary: #1C1C1C; /* Charcoal Black */
+  --text-secondary: #A5A5A5; /* Subtle Gray */
+  --button-hover: #4F6B48; /* Rich Green */
+}
+
+/* General Styles */
+body {
+  margin: 0;
+  font-family: 'Arial', sans-serif;
+  background-color: var(--background-dark);
+  color: var(--text-primary);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+/* Form Container */
+form {
+  background-color: var(--background-light);
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  width: 100%;
+  max-width: 500px;
+  text-align: left;
+}
+
+/* Labels */
+label {
+  display: block;
+  font-size: 1rem;
+  color: var(--text-primary);
+  margin-bottom: 0.5rem;
+}
+
+/* Input Fields */
+input[type="text"],
+input[type="url"],
+input[type="number"] {
+  width: 95%;
+  padding: 0.75rem;
+  margin-bottom: 1rem;
+  border: 1px solid var(--text-secondary);
+  border-radius: 8px;
+  font-size: 1rem;
+  color: var(--text-primary);
+  background-color: var(--background-light);
+}
+
+input:focus {
+  outline: none;
+  border-color: var(--accent-gold);
+  box-shadow: 0 0 4px var(--accent-gold);
+}
+
+/* Button Styles */
+button {
+  background-color: var(--accent-gold);
+  color: var(--text-primary);
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  width: 100%;
+}
+
+button:hover {
+  background-color: var(--button-hover);
+  color: var(--background-light);
+  transform: scale(1.05);
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+  form {
+    padding: 1.5rem;
+  }
+}

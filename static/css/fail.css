@@ -1,0 +1,43 @@
+/* Restaurant-Inspired Color Palette */
+:root {
+  --background-dark: #2E3B2F; /* Dark Olive Green */
+  --background-light: #F7F5ED; /* Soft Cream */
+  --error-red: #D9534F; /* Muted Red for Errors */
+  --text-primary: #1C1C1C; /* Charcoal Black */
+  --text-light: #FFFFFF; /* White */
+}
+
+/* General Styles */
+body {
+  margin: 0;
+  font-family: 'Arial', sans-serif;
+  background-color: var(--background-dark);
+  color: var(--text-light);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  text-align: center;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+/* Header Styling */
+h1 {
+  font-size: 2.5rem;
+  color: var(--error-red);
+  background-color: var(--background-light);
+  padding: 1rem 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  text-transform: uppercase;
+  margin: 0;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+  h1 {
+    font-size: 2rem;
+    padding: 0.75rem 1.5rem;
+  }
+}

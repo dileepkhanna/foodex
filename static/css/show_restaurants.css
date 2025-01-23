@@ -1,0 +1,111 @@
+/* Restaurant-Inspired Color Palette */
+:root {
+  --background-dark: #2E3B2F; /* Dark Olive Green */
+  --background-light: #F7F5ED; /* Soft Cream */
+  --accent-gold: #D9C17E; /* Muted Gold */
+  --text-primary: #1C1C1C; /* Charcoal Black */
+  --text-light: #FFFFFF; /* White */
+  --table-border: #4F6B48; /* Rich Green */
+  --link-hover: #8AA889; /* Light Green */
+}
+
+/* General Styles */
+body {
+  margin: 0;
+  font-family: 'Arial', sans-serif;
+  background-color: var(--background-dark);
+  color: var(--text-light);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+h1 {
+  font-size: 2.5rem;
+  color: var(--accent-gold);
+  margin-bottom: 1.5rem;
+}
+
+/* Add Restaurant Link */
+a {
+  text-decoration: none;
+  color: var(--background-light);
+  background-color: var(--accent-gold);
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  font-weight: bold;
+  margin-bottom: 1.5rem;
+  display: inline-block;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+a:hover {
+  background-color: var(--link-hover);
+  color: var(--background-light);
+  transform: scale(1.05);
+}
+
+/* Table Styles */
+table {
+  width: 90%;
+  border-collapse: collapse;
+  background-color: var(--background-light);
+  color: var(--text-primary);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+thead {
+  background-color: var(--accent-gold);
+  color: var(--text-light);
+}
+
+th, td {
+  padding: 1rem;
+  text-align: center;
+  border: 1px solid var(--table-border);
+}
+
+th {
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+tr:nth-child(even) {
+  background-color: #F9F9F9;
+}
+
+tr:hover {
+  background-color: var(--link-hover);
+  color: var(--text-light);
+}
+
+img {
+  border-radius: 8px;
+  max-width: 100px;
+  max-height: 100px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  table {
+    width: 100%;
+  }
+
+  th, td {
+    padding: 0.5rem;
+    font-size: 0.9rem;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+
+  a {
+    font-size: 0.9rem;
+    padding: 0.5rem 1rem;
+  }
+}

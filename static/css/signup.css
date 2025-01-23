@@ -1,110 +1,108 @@
-/* Root variables for color palette */
+/* Restaurant-Inspired Color Palette */
 :root {
-    --primary-color: #FC8019;
-    --primary-dark: #E65C00;
-    --white: #FFFFFF;
-    --light-gray: #F5F5F5;
-    --dark-gray: #333333;
-    --text-primary: #000000;
-    --text-secondary: #4A4A4A;
-    --gradient: linear-gradient(135deg, #FC8019, #FF5733);
+  --background-dark: #2E3B2F; /* Dark Olive Green */
+  --background-light: #F7F5ED; /* Soft Cream */
+  --accent-gold: #D9C17E; /* Muted Gold */
+  --text-primary: #1C1C1C; /* Charcoal Black */
+  --text-secondary: #A5A5A5; /* Subtle Gray */
+  --button-hover: #4F6B48; /* Rich Green */
 }
 
-/* General styling */
+/* General Styles */
 body {
-    font-family: 'Poppins', sans-serif;
-    margin: 0;
-    padding: 0;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background: var(--gradient);
-    color: var(--text-primary);
+  margin: 0;
+  font-family: 'Arial', sans-serif;
+  background-color: var(--background-dark);
+  color: var(--text-primary);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  padding: 0; /* Ensures no extra space around the page */
+  box-sizing: border-box;
 }
 
-/* Container for the form */
+/* Form Container */
 div {
-    background-color: var(--white);
-    border-radius: 12px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
-    padding: 20px 50px; /* Reduced vertical padding, increased horizontal padding */
-    width: 95%;
-    max-width: 500px; /* Increased maximum width */
-    box-sizing: border-box;
-    text-align: center;
+  background-color: var(--background-light);
+  padding: 2rem;
+
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  width: 400px;
+
 }
 
-/* Headings */
+/* Heading */
 h3 {
-    text-align: center;
-    color: var(--primary-color);
-    font-size: 1.8rem;
-    margin-bottom: 15px; /* Slightly reduced margin */
+  color: var(--accent-gold);
+  margin-bottom: 1.5rem;
+  font-size: 1.8rem;
+  text-shadow: 1px 1px var(--text-secondary);
 }
 
-/* Labels */
+/* Form Elements */
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
 label {
-    display: block;
-    font-weight: 600;
-    margin-bottom: 8px;
-    color: var(--text-secondary);
-    text-align: left;
+  font-size: 1rem;
+  color: var(--text-primary);
+  margin-bottom: 0.5rem;
 }
 
-/* Inputs and textarea */
-input, textarea {
-    width: 100%;
-    padding: 10px; /* Reduced padding for height adjustment */
-    margin-bottom: 12px; /* Reduced margin for compactness */
-    border: 1px solid var(--light-gray);
-    border-radius: 6px;
-    font-size: 14px;
-    background-color: var(--light-gray);
-    color: var(--text-primary);
-    box-sizing: border-box;
-    transition: border-color 0.3s ease, background-color 0.3s ease;
-}
-
-input:focus, textarea:focus {
-    border-color: var(--primary-color);
-    background-color: var(--white);
-    outline: none;
-}
-
-/* Textarea */
+input[type="text"],
+input[type="password"],
+input[type="email"],
 textarea {
-    resize: vertical;
-    height: 70px; /* Slightly reduced height */
+  width: 95%;
+  padding: 0.75rem;
+  margin-bottom: 1rem;
+  border: 1px solid var(--text-secondary);
+  border-radius: 8px;
+  font-size: 1rem;
+  color: var(--text-primary);
+  background-color: var(--background-light);
 }
 
-/* Button styling */
+input:focus,
+textarea:focus {
+  outline: none;
+  border-color: var(--accent-gold);
+  box-shadow: 0 0 4px var(--accent-gold);
+}
+
+textarea {
+  resize: none;
+  height: 80px;
+}
+
+/* Button Styles */
 button {
-    width: 100%;
-    padding: 10px; /* Reduced padding for height adjustment */
-    background: var(--gradient);
-    color: var(--white);
-    font-size: 16px;
-    font-weight: bold;
-    border: none;
-    border-radius: 6px;
-    cursor: pointer;
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  background-color: var(--accent-gold);
+  color: var(--text-primary);
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  width: 101%;
 }
 
 button:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
-    background: var(--primary-dark);
+  background-color: var(--button-hover);
+  color: var(--background-light);
+  transform: scale(1.05);
 }
 
-/* Responsive design */
-@media (max-width: 480px) {
-    div {
-        padding: 15px 30px; /* Adjusted padding for smaller screens */
-    }
-
-    h3 {
-        font-size: 1.5rem;
-    }
+/* Responsive Design */
+@media (max-width: 500px) {
+  div {
+    width: 90%;
+  }
 }

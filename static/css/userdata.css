@@ -1,0 +1,72 @@
+/* Restaurant-Inspired Color Palette */
+:root {
+  --background-dark: #2E3B2F; /* Dark Olive Green */
+  --background-light: #F7F5ED; /* Soft Cream */
+  --accent-gold: #D9C17E; /* Muted Gold */
+  --text-primary: #1C1C1C; /* Charcoal Black */
+  --text-light: #FFFFFF; /* White */
+  --table-border: #4F6B48; /* Rich Green */
+  --link-hover: #8AA889; /* Light Green */
+}
+
+/* General Styles */
+body {
+  margin: 0;
+  font-family: 'Arial', sans-serif;
+  background-color: var(--background-dark);
+  color: var(--text-light);
+  padding: 20px;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+/* Table Styling */
+table {
+  width: 60%;
+  border-collapse: collapse;
+  background-color: var(--background-light);
+  color: var(--text-primary);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+thead {
+  background-color: var(--accent-gold);
+  color: var(--text-light);
+}
+
+th, td {
+  padding: 1rem;
+  text-align: left;
+  border: 1px solid var(--table-border);
+}
+
+th {
+  font-weight: bold;
+  text-transform: capitalize;
+}
+
+tbody tr:nth-child(even) {
+  background-color: #F9F9F9;
+}
+
+tbody tr:hover {
+  background-color: var(--link-hover);
+  color: var(--text-light);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  table {
+    width: 90%;
+  }
+
+  th, td {
+    padding: 0.5rem;
+    font-size: 0.9rem;
+  }
+}

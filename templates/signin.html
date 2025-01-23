@@ -7,18 +7,17 @@
     <link href="{% static 'css/signin.css' %}" rel="stylesheet">
 </head>
 <body>
+
     <div>
         <h3>Sign in below:</h3>
-    </div>
-    <div>
     <form method="POST" action="{% url 'handle_login' %}">
         {% csrf_token %}
         <label>Username </label>
         <input type="text" name="username">
-        <br><br>
+
         <label>Password </label>
         <input type="password" name="password">
-        <br><br>
+
         <button type="submit">SIGN IN</button>
     </form>
     </div>
